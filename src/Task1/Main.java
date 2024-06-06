@@ -15,6 +15,8 @@ public class Main {
         employees[8] = new Employee("Валентина", "Денисова", "Павловна", 4, 34000);
         employees[9] = new Employee("Анастасия", "Стрельцова", "Максимовна", 5, 45000);
         System.out.println();
+        System.out.println(getAllEmployees());
+        System.out.println();
         System.out.println("Сумма затрат на зарплаты в месяц равна " + getSumSalaryPerMonth());
         System.out.println();
         System.out.println("Сотрудник с минимальной зарплатой " + getMinSalary());
@@ -25,7 +27,14 @@ public class Main {
         System.out.println();
         System.out.println(getFullNameEmployees());
     }
-
+    public static boolean getAllEmployees() {
+        if (employees != null) {
+        for (Employee employee : employees) {
+            System.out.println(employee);
+            }
+        }
+        return false;
+    }
 
     public static double getSumSalaryPerMonth() {
         double sum = 0;
