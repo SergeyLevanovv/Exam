@@ -22,6 +22,8 @@ public class Main {
         System.out.println("Сотрудник с максимальной зарплатой " + getMaxSalary());
         System.out.println();
         System.out.println("Среднее значение зарплат равно " + getMiddleSalaryPerMonth());
+        System.out.println();
+        System.out.println(getFullNameEmployees());
     }
 
 
@@ -88,7 +90,17 @@ public class Main {
             mid = sum / 10;
         }
         return mid;
+    }
 
+    public static boolean getFullNameEmployees() {
+        if (employees != null) {
+            for (int i = 0; i < employees.length; i++) {
+                System.out.print(employees[i].getSurname() + " ");
+                System.out.print(employees[i].getName() + " ");
+                System.out.println(employees[i].getMiddleName() + " ");
+            }
+        }
+        return false;
     }
 
 }
